@@ -31,7 +31,7 @@ namespace WindowsFormsApplication3
 
             var log = new LoggerConfiguration().MinimumLevel.Verbose()
                 .WriteTo.RollingFile(@"d:\log-{Date}.txt")
-                .WriteTo.Seq("http://seqtestbill.cloudapp.net:5341")
+                .WriteTo.Seq("http://yoururl.cloudapp.net:5341")
                 // .addEnricherThingee(any data you want)
                 .Enrich.WithProperty("companyid", 123)  // send api key here to auth? https?
                 .CreateLogger();
